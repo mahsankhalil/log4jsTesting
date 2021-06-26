@@ -1,0 +1,17 @@
+{
+  "name": "testing",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Muhammad Ahsan Khalil",
+  "license": "ISC",
+  "dependencies": {
+    "log4js": "^6.3.0",
+    "log4js-extend": "^0.2.1"
+  }
+}
