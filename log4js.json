@@ -1,22 +1,54 @@
-{
-    "appenders": {
-    "console" : {
-        "type": "console",
-        "category": "console"
-    },
-    
-    "file" : {
-        "category": "test-file-appender",
-        "type": "file",
-        "filename": "log_file.log",
-        "maxLogSize": 10240,
-        "backups": 3,
-        "flag" : "w",
-        "pattern":"%d %-5p %c{1}:%L - %m%n"
+    {
+        "appenders": {
+            "console" : {
+                "type": "console",
+                "category": "console",
+                "layout": {
+                    "type": "pattern",
+                    "pattern": "[%d] [%p] [host %h] [file %f{1}] [Line number %l] [%m]%n"
+                }
+            },
+            "Info" : {
+                "category": "test-file-appender",
+                "type": "file",
+                "filename": "info.log",
+                "maxLogSize": 10240,
+                "backups": 3,
+                "flag" : "w",
+                "layout": {
+                    "type": "pattern",
+                    "pattern": "[%d] [%p] [host %h] [file %f{1}] [Line number %l] [%m]%n"
+                }
+            },
+            "Warning" : {
+                "category": "test-file-appender",
+                "type": "file",
+                "filename": "warning.log",
+                "maxLogSize": 10240,
+                "backups": 3,
+                "flag" : "w",
+                "layout": {
+                    "type": "pattern",
+                    "pattern": "[%d] [%p] [host %h] [file %f{1}] [Line number %l] [%m]%n"
+                }
+            },
+            "Error" : {
+                "category": "test-file-appender",
+                "type": "file",
+                "filename": "error.log",
+                "maxLogSize": 10240,
+                "backups": 3,
+                "flag" : "w",
+                "layout": {
+                    "type": "pattern",
+                    "pattern": "[%d] [%p] [host %h] [file %f{1}] [Line number %l] [%m]%n"
+                }
+            }
+        },
+        "categories": {
+            "default" :{"appenders": ["console"], "level": "DEBUG", "enableCallStack": true},
+            "Info" : {"appenders": ["Info", "console"], "level": "INFO", "enableCallStack": true},
+            "Warning" : {"appenders": ["Warning", "console"], "level": "INFO", "enableCallStack": true},
+            "Error" : {"appenders": ["Error", "console"], "level": "ERROR", "enableCallStack": true}
+        }
     }
-    },
-    "categories": {
-        "default" :{"appenders": ["console", "file"], "level": "DEBUG"},
-        "file" : {"appenders": ["file"], "level": "DEBUG"}
-    }
-}
