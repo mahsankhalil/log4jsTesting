@@ -11,7 +11,7 @@
             "Info" : {
                 "category": "test-file-appender",
                 "type": "file",
-                "filename": "info.log",
+                "filename": "AlphaLogger/log.files/info.log",
                 "maxLogSize": 10240,
                 "backups": 3,
                 "flag" : "w",
@@ -23,7 +23,7 @@
             "Warning" : {
                 "category": "test-file-appender",
                 "type": "file",
-                "filename": "warning.log",
+                "filename": "AlphaLogger/log.files/warning.log",
                 "maxLogSize": 10240,
                 "backups": 3,
                 "flag" : "w",
@@ -35,7 +35,7 @@
             "Error" : {
                 "category": "test-file-appender",
                 "type": "file",
-                "filename": "error.log",
+                "filename": "AlphaLogger/log.files/error.log",
                 "maxLogSize": 10240,
                 "backups": 3,
                 "flag" : "w",

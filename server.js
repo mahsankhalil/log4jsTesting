@@ -9,7 +9,7 @@
 // infoLogger.info("Warning aa gai")
 // errorLogger.error("error aa gaya")
 
-const alphaLogger = require('./AlphaLogger')
+const alphaLogger = require('./AlphaLogger/AlphaLogger')
 alphaLogger.shared.errorLogger.error("Error is about to come");
 alphaLogger.shared.warningLogger.warn("Warning is about to come");
 alphaLogger.shared.infoLogger.warn("Info is about to come");
